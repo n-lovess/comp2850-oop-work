@@ -7,8 +7,8 @@ fun printReversed(text: String) {
 
 fun main() {
     print("Enter a string: ")
-    val input = readLine()
+    val input = readLine() ?: ""
 
     println("Input: $input")
-    //printReversed(input)
+    printReversed(input)
 }

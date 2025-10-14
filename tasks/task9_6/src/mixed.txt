@@ -1,0 +1,8 @@
+Istanbul 11
+Vancouver 3
+New York 1 
+Los Angeles 1
+Dubai 3
+Nice 10
+Tehran 19
+Newcastle upon Tyne 19

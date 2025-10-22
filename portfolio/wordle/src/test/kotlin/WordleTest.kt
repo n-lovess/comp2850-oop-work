@@ -13,10 +13,11 @@ class WordleTest : StringSpec({
         isValid("ab3de") shouldBe false
     }
 
-    "evaluateGuess returns correct matches" {
-        evaluateGuess("abcde", "abzzz") shouldBe listOf(1, 1, 0, 0, 0)
-        evaluateGuess("apple", "apple") shouldBe listOf(1, 1, 1, 1, 1)
+    "evaluateGuess returns correct matches (enhanced rules)" {
+        evaluateGuess("abcde", "abzzz") shouldBe listOf(2, 2, 0, 0, 0)
+        evaluateGuess("apple", "apple") shouldBe listOf(2, 2, 2, 2, 2)
         evaluateGuess("apple", "zzzzz") shouldBe listOf(0, 0, 0, 0, 0)
+        evaluateGuess("plane", "apple") shouldBe listOf(1, 1, 1, 0, 2)
     }
 
     "pickRandomWord removes the word and reduces size" {

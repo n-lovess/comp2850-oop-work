@@ -45,14 +45,14 @@ fun evaluateGuess(guess: String, target: String): List<Int> {
     for (i in 0 until WORD_LENGTH) {
         if (guess[i] == target[i]) {
             result[i] = CORRECT
-            remaining[i] = '_' 
+            remaining[i] = '_'
         }
     }
 
     for (i in 0 until WORD_LENGTH) {
         if (result[i] == NO_MATCH && remaining.contains(guess[i])) {
             result[i] = WRONG_POSITION
-            remaining[remaining.indexOf(guess[i])] = '_' 
+            remaining[remaining.indexOf(guess[i])] = '_'
         }
     }
 
@@ -63,9 +63,9 @@ fun displayGuess(guess: String, matches: List<Int>) {
     for (i in guess.indices) {
         val c = guess[i]
         val colour = when (matches[i]) {
-            CORRECT -> "\u001B[32m" 
-            WRONG_POSITION -> "\u001B[33m" 
-            else -> "\u001B[0m" 
+            CORRECT -> "\u001B[32m"
+            WRONG_POSITION -> "\u001B[33m"
+            else -> "\u001B[0m"
         }
         print("$colour$c\u001B[0m")
     }

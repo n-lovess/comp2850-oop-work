@@ -4,8 +4,8 @@ fun main() {
     val target = pickRandomWord(words)
     val maxAttempts = MAX_ATTEMPTS
 
-    println("Welcome to Wordle (simplified)!")
-    println("Guess the 5-letter word. You have $maxAttempts attempts.\n")
+    println("Wordle")
+    println("Get 6 chances to guess a 5-letter word.\n")
 
     for (attempt in 1..maxAttempts) {
         val guess = obtainGuess(attempt)
